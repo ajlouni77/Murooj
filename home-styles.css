@@ -1,0 +1,348 @@
+/* Navbar Styling */
+.navbar-container {
+    background-color: #81c408; /* اللون الجديد للـ Navbar */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed; /* اجعل شريط التنقل ثابتًا */
+    top: 0; /* يظل في أعلى الصفحة */
+    left: 0;
+    right: 0;
+    z-index: 1000; /* ضمان ظهوره فوق العناصر الأخرى */
+}
+.logo-text {
+    color: white;
+    font-size: 25px;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 100px;
+    direction: rtl; /* تغيير الاتجاه للغة العربية */
+}
+
+.navbar-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-menu li {
+    margin: 0;
+}
+
+.navbar-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.navbar-menu a:hover {
+    color: #fff8d6;
+}
+
+.navbar-icons {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-icons .icon {
+    color: white;
+    font-size: 20px;
+    margin-right: 20px; /* تغيير المسافة لتناسب اللغة العربية */
+    text-decoration: none;
+}
+
+.navbar-icons .language-button {
+    background-color: white;
+    color: #81c408;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Search Section */
+#search-section {
+    margin-top: 80px; /* اضبط القيمة بناءً على ارتفاع الـ Navbar */
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+    background-color: #ecf0f1;
+}
+
+
+#search-box {
+    padding: 12px 30px;
+    width: 300px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    font-size: 16px;
+    transition: box-shadow 0.3s ease;
+    position: relative;
+}
+
+#search-box:focus {
+    outline: none;
+    box-shadow: 0 0 8px rgba(129, 196, 8, 0.7);
+}
+
+#search-box::placeholder {
+    color: #888;
+}
+
+#filter-options {
+    padding: 12px;
+    margin-right: 10px; /* تغيير المسافة لتناسب اللغة العربية */
+    width: 150px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+}
+
+button {
+    padding: 12px 20px;
+    background-color: #81c408;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px; /* تغيير المسافة لتناسب اللغة العربية */
+    transition: background-color 0.3s;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #69a406;
+}
+
+/* Hero Section */
+#hero {
+    background-color: white;
+    color: #81c408;
+    padding: 100px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+}
+
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+@media (min-width: 768px) {
+    .hero-container {
+        flex-direction: row;
+        text-align: left;
+    }
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); */
+}
+
+.hero-text {
+    flex: 1;
+    padding: 20px;
+    text-align: right; /* يجعل النصوص تبدأ من اليمين */
+}
+
+.hero-text h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    /* text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); */
+}
+
+.hero-text p {
+    font-size: 20px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+
+
+/* Services Section */
+#services {
+    display: flex;
+    justify-content: space-around;
+    padding: 60px 20px;
+    background-color: #f4f4f4;
+}
+
+.service {
+    width: 45%;
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.service h2 {
+    margin-bottom: 20px;
+}
+
+.service p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* how it work  */
+#how-it-works {
+    background-color: #f9f9f9;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#how-it-works h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+#how-it-works .steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#how-it-works .step {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#how-it-works .step:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+#how-it-works .step-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    color: #4CAF50;
+}
+
+#how-it-works h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#how-it-works p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* how it work  */
+
+/* Popular Products Section */
+#popular-products {
+    background-color: #f9f9f9;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#popular-products h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+#popular-products .product {
+    display: inline-block;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+    padding: 20px;
+    text-align: center;
+    width: 200px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#popular-products .product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+#popular-products .product img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+#popular-products .product p {
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: bold;
+}
+/* Footer */
+footer {
+    background-color: black;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+footer ul {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+footer ul li {
+    display: inline;
+    margin-left: 20px; /* تغيير المسافة لتناسب اللغة العربية */
+}
+
+footer ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+footer ul li a:hover {
+    color: #4CAF50;
+}
+
+.social-media a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.social-media a:hover {
+    color: #4CAF50;
+}

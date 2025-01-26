@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مروج - إنشاء حساب</title>
+    <link rel="stylesheet" href="SignUp.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <div class="navbar-container">
+        <nav class="navbar">
+           <div class="navbar-logo">
+    <span class="logo-text">مروج</span>
+</div>
+            <ul class="navbar-menu">
+                <li><a href="home-page.html">الرئيسية</a></li>
+                <li><a href="Central%20market.html#">السوق المركزي</a></li>
+                <li><a href="Shops.html">المحلات</a></li>
+                <li><a href="join%20us.html">انضم إلينا</a></li>
+                <li><a href="about.html">من نحن</a></li>
+                <li><a href="contact.html">اتصل بنا</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- قسم إنشاء الحساب -->
+    <section id="signup-section">
+        <div class="signup-container">
+            <div class="signup-info">
+                <h2>مرحبًا بك في مروج!</h2>
+                <p>قم بإنشاء حساب جديد للوصول إلى خدماتنا وإدارة طلباتك بسهولة.</p>
+            </div>
+            <div class="signup-form">
+                <h3>إنشاء حساب</h3>
+                <form id="signup-form">
+                    <div class="form-group">
+                        <label for="name">الاسم الكامل</label>
+                        <input type="text" id="name" name="name" placeholder="أدخل اسمك الكامل" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">البريد الإلكتروني</label>
+                        <input type="email" id="email" name="email" placeholder="أدخل بريدك الإلكتروني" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">كلمة المرور</label>
+                        <input type="password" id="password" name="password" placeholder="أدخل كلمة المرور" required>
+                    </div>
+                    <button type="submit" class="signup-btn">إنشاء حساب</button>
+                    <p class="login-link">لديك حساب بالفعل؟ <a href="login.html">تسجيل الدخول</a></p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-app.js";
+        import { getAuth, createUserWithEmailAndPassword, updateProfile } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-auth.js";
+
+        // إعداد Firebase
+        const firebaseConfig = {
+            apiKey: "AIzaSyDTn4y3N-w6EHq-BFJ5UFFcNPU2isA2tdA",
+            authDomain: "murooj-739bc.firebaseapp.com",
+            projectId: "murooj-739bc",
+            storageBucket: "murooj-739bc.appspot.com",
+            messagingSenderId: "390503715440",
+            appId: "1:390503715440:web:38e661f0c5ae74e9379ab5",
+            measurementId: "G-PE3FR1E2WC"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+
+        // إنشاء حساب جديد
+        document.getElementById('signup-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            createUserWithEmailAndPassword(auth, email, password)
+                .then((userCredential) => {
+                    // تحديث اسم المستخدم
+                    const user = userCredential.user;
+                    updateProfile(user, { displayName: name })
+                        .then(() => {
+                            alert("تم إنشاء الحساب بنجاح!");
+                            window.location.href = "http://127.0.0.1:5500/home-page.html"; // توجيه المستخدم إلى صفحة تسجيل الدخول
+                        })
+                        .catch((error) => {
+                            alert("خطأ أثناء تحديث الاسم: " + error.message);
+                        });
+                })
+                .catch((error) => {
+                    const errorMessage = error.message;
+                    alert(`خطأ: ${errorMessage}`);
+                });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Join Us </title>
+    <link rel="stylesheet" href="join us-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <div class="navbar-container">
+        <nav class="navbar">
+           <div class="navbar-logo">
+    <span class="logo-text">مروج</span>
+</div>
+
+            <ul class="navbar-menu">
+                <li><a href="http://127.0.0.1:5500/home-page.html">الرئيسية</a></li>
+                <li><a href="http://127.0.0.1:5500/Central%20market.html#">السوق المركزي</a></li>
+                <li><a href="http://127.0.0.1:5500/Shops.html">المحلات</a></li>
+                <li><a href="http://127.0.0.1:5500/join%20us.html">انضم إلينا</a></li>
+                <li><a href="http://127.0.0.1:5500/about.html#">من نحن</a></li>
+                <li><a href="http://127.0.0.1:5500/contact.html">اتصل بنا</a></li>
+            </ul>
+            <div class="navbar-icons">
+                <button id="language-switch" class="language-button">EN</button>
+                <a href="#" class="icon"><i class="fas fa-shopping-cart"></i></a>
+                <a href="http://127.0.0.1:5500/login.html#" class="icon"><i class="fas fa-user"></i></a>
+            </div>
+        </nav>
+    </div>
+
+   <section id="join-us">
+    <div class="join-us-container">
+        <h2>انضم إلينا كـ سائق توصيل</h2>
+        <p>إذا كنت تمتلك خبرة في القيادة وترغب في العمل مع فريقنا الرائع لتوصيل الطلبات، نحن نبحث عنك!</p>
+        <div class="join-us-content">
+            <div class="join-us-text">
+                <h3>"المزايا التي نقدمها لك"</h3>
+                <!-- بداية المزايا التي نقدمها لك -->
+                <div class="benefits-grid">
+                    <div class="benefit">
+                        <i class="fas fa-wallet"></i>
+                        <h4>أرباح مجزية</h4>
+                        <p>احصل على أرباح وحوافز متميزة حسب عدد الطلبات التي تقوم بتوصيلها.</p>
+                    </div>
+                    <div class="benefit">
+                        <i class="fas fa-clock"></i>
+                        <h4>العمل مرن</h4>
+                        <p>حدد ساعات عملك بنفسك وتجنب أي التزامات غير ضرورية.</p>
+                    </div>
+                    <div class="benefit">
+                        <i class="fas fa-car"></i>
+                        <h4>فرص تطور مهني</h4>
+                        <p>اكتسب خبرة ومهارات جديدة في مجال التوصيل والقيادة.</p>
+                    </div>
+                    <div class="benefit">
+                        <i class="fas fa-users"></i>
+                        <h4>بيئة عمل مهنية</h4>
+                        <p>انضم إلى فريق عمل متميز يوفر لك الدعم والمساعدة المستمرة.</p>
+                    </div>
+                </div>
+                <!-- نهاية المزايا التي نقدمها لك -->
+            </div>
+
+            <!-- قسم قدم طلبك الآن -->
+<section id="order-now">
+    <div class="order-container">
+        <h2>قدم طلبك الآن</h2>
+        <p>انضم الى فريقنا</p>
+        <form id="join-us-form" action="#" method="post">
+    <div class="form-group">
+        <label for="name">الاسم الكامل</label>
+        <input type="text" id="name" name="name" required>
+    </div>
+    <div class="form-group">
+        <label for="email">البريد الإلكتروني</label>
+        <input type="email" id="email" name="email" required>
+    </div>
+    <div class="form-group">
+        <label for="phone">رقم الهاتف</label>
+        <input type="tel" id="phone" name="phone" required>
+    </div>
+    <div class="form-group">
+        <label for="address"> معلومات عنك </label>
+        <textarea id="address" name="address" rows="4" required></textarea>
+    </div>
+    <button type="submit" class="submit-btn">قدّم طلبك الآن</button>
+</form>
+
+    </div>
+</section>
+
+        </div>
+    </div>
+</section>
+     <footer>
+        <ul>
+            <li><a href="#">سياسة الخصوصية</a></li>
+            <li><a href="#">الشروط والأحكام</a></li>
+            <li><a href="#">تواصل معنا</a></li>
+        </ul>
+        <div class="social-media">
+            <a href="#">فيسبوك</a>
+            <a href="#">تويتر</a>
+            <a href="#">إنستغرام</a>
+        </div>
+    </footer>
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-analytics.js";
+  import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-firestore.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyDTn4y3N-w6EHq-BFJ5UFFcNPU2isA2tdA",
+    authDomain: "murooj-739bc.firebaseapp.com",
+    projectId: "murooj-739bc",
+    storageBucket: "murooj-739bc.firebasestorage.app",
+    messagingSenderId: "390503715440",
+    appId: "1:390503715440:web:38e661f0c5ae74e9379ab5",
+    measurementId: "G-PE3FR1E2WC"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+  const db = getFirestore(app);
+
+  // Event listener for form submission
+  document.getElementById("join-us-form").addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const phone = document.getElementById("phone").value;
+    const address = document.getElementById("address").value;
+
+    try {
+      await addDoc(collection(db, "join_us_requests"), {
+        name,
+        email,
+        phone,
+        address,
+        timestamp: new Date()
+      });
+      alert("تم إرسال طلبك بنجاح!");
+      document.getElementById("join-us-form").reset();
+    } catch (error) {
+      console.error("Error adding document: ", error);
+      alert("حدث خطأ أثناء تقديم الطلب. حاول مرة أخرى.");
+    }
+  });
+</script>
+
+</body>
+</html>
+

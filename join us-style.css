@@ -1,0 +1,277 @@
+/* Navbar Styling */
+.navbar-container {
+    background-color: #81c408; /* اللون الجديد للـ Navbar */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 10px 50px; /* تقليل المسافات الداخلية */
+}
+
+.logo-text {
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    direction: rtl;
+}
+
+.navbar-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-menu li {
+    margin: 0;
+}
+
+.navbar-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.navbar-menu a:hover {
+    color: #fff8d6;
+}
+
+.navbar-icons {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-icons .icon {
+    color: white;
+    font-size: 20px;
+    margin-right: 20px;
+    text-decoration: none;
+}
+
+.navbar-icons .language-button {
+    background-color: white;
+    color: #81c408;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* بداية قسم المزايا التي نقدمها لك */
+.join-us-text h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+    font-weight: bold;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    padding: 0 20px;
+    justify-items: center;
+}
+
+.benefit {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* جعل الظل أكثر وضوحًا */
+    padding: 40px 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 300px; /* الحد الأقصى لعرض البوكس */
+    width: 100%;
+}
+
+.benefit i {
+    font-size: 50px; /* زيادة حجم الأيقونات */
+    color: #ffcc00;
+    margin-bottom: 20px; /* زيادة المسافة بين الأيقونة والعنوان */
+}
+
+.benefit h4 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 15px; /* زيادة المسافة بين العنوان والوصف */
+    font-weight: bold;
+}
+
+.benefit p {
+    font-size: 16px;
+    color: #777;
+    line-height: 1.6; /* زيادة تباعد الأسطر لتحسين القراءة */
+}
+
+.benefit:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* زيادة تأثير الظل عند التمرير */
+}
+
+.benefit:hover i {
+    color: #ff9900;
+}
+
+/* تصميم استجابة للأجهزة المحمولة */
+@media (max-width: 1024px) {
+    .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .benefits-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* نهاية قسم المزايا التي نقدمها لك */
+
+/* تنسيق إضافي لملء النموذج داخل قسم "انضم إلينا" */
+/* بداية قسم قدم طلبك الآن */
+#order-now {
+    background-color: #f9f9f9;
+    padding: 60px 20px;
+    text-align: center;
+    color: #333;
+}
+
+#order-now h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#order-now p {
+    font-size: 18px;
+    color: #777;
+    margin-bottom: 40px;
+}
+
+.order-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.submit-btn {
+    background-color: #81c408;
+    color: white;
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #669900;
+}
+
+/* تصميم استجابة للأجهزة المحمولة */
+@media (max-width: 768px) {
+    .order-container {
+        padding: 0 20px;
+    }
+
+    .form-group {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    #order-now h2 {
+        font-size: 28px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 10px;
+    }
+
+    .submit-btn {
+        font-size: 16px;
+        padding: 12px 25px;
+    }
+}
+
+/* نهاية قسم قدم طلبك الآن */
+
+
+
+/* Footer */
+footer {
+    background-color: black;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+footer ul {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+footer ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+footer ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+footer ul li a:hover {
+    color: #4CAF50;
+}
+
+.social-media a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.social-media a:hover {
+    color: #4CAF50;
+}
+

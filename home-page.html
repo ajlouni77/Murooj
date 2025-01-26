@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مروج - الصفحة الرئيسية</title>
+    <link rel="stylesheet" href="home-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <div class="navbar-container">
+        <nav class="navbar">
+           <div class="navbar-logo">
+    <span class="logo-text">مروج</span>
+</div>
+
+            <ul class="navbar-menu">
+                <li><a href="http://127.0.0.1:5500/home-page.html">الرئيسية</a></li>
+                <li><a href="http://127.0.0.1:5500/Central%20market.html#">السوق المركزي</a></li>
+                <li><a href="http://127.0.0.1:5500/Shops.html">المحلات</a></li>
+                <li><a href="http://127.0.0.1:5500/join%20us.html">انضم إلينا</a></li>
+                <li><a href="http://127.0.0.1:5500/about.html#">من نحن</a></li>
+                <li><a href="http://127.0.0.1:5500/contact.html">اتصل بنا</a></li>
+            </ul>
+            <div class="navbar-icons">
+                <button id="language-switch" class="language-button">EN</button>
+                <a href="#" class="icon"><i class="fas fa-shopping-cart"></i></a>
+                <a href="http://127.0.0.1:5500/login.html#" class="icon"><i class="fas fa-user"></i></a>
+            </div>
+        </nav>
+    </div>
+
+    <!-- قسم البحث مع الفلتر -->
+    <section id="search-section">
+        <input type="text" placeholder="ابحث عن منتج..." id="search-box">
+        <select id="filter-options">
+            <option value="all">الكل</option>
+            <option value="vegetables">خضروات</option>
+            <option value="fruits">فواكه</option>
+        </select>
+        <button>بحث</button>
+    </section>
+
+    <!-- Hero Section -->
+   <section id="hero">
+    <div class="hero-container">
+        <div class="hero-image">
+            <!-- أضف هنا صورة المنتج -->
+            <img src="hero-img-1.png" alt="صورة للخضروات والفواكه">
+        </div>
+        <div class="hero-text">
+            <h1>نحن نوصل الخضروات والفواكه من السوق المركزي إلى المحلات ومن المحلات إلى الأفراد</h1>
+            <p>خدماتنا تتيح لك الحصول على المنتجات الطازجة بسرعة وسهولة.</p>
+        </div>
+    </div>
+</section>
+
+
+
+    <!-- قسم الخدمات الرئيسية -->
+    <section id="services">
+        <div class="service">
+            <h2>توصيل من السوق المركزي للمحلات</h2>
+            <p>نحن نوفر خدمات التوصيل السريع والمريح من السوق المركزي للمحلات التجارية.</p>
+        </div>
+        <div class="service">
+            <h2>توصيل من المحلات للأفراد</h2>
+            <p>احصل على الخضروات والفواكه الطازجة مباشرة إلى باب منزلك.</p>
+        </div>
+    </section>
+
+    <!-- قسم "كيف يعمل" -->
+    <section id="how-it-works" class="how-it-works">
+    <h2>كيف يعمل</h2>
+    <div class="steps">
+        <div class="step">
+            <div class="step-icon">📋</div>
+            <h3>اختر المنتجات</h3>
+            <p>تصفح قائمتنا المتنوعة من الخضروات والفواكه الطازجة واختر ما يناسبك.</p>
+        </div>
+        <div class="step">
+            <div class="step-icon">📍</div>
+            <h3>حدد الموقع</h3>
+            <p>قم بتحديد عنوانك لتوصيل الطلبات مباشرة إلى باب منزلك أو محلك.</p>
+        </div>
+        <div class="step">
+            <div class="step-icon">🚚</div>
+            <h3>نوصلك الطلب</h3>
+            <p>استمتع بتوصيل سريع وآمن مع ضمان جودة المنتجات.</p>
+        </div>
+    </div>
+</section>
+
+    <!-- قسم المنتجات الأكثر طلباً -->
+    <section id="popular-products">
+        <h2>المنتجات الأكثر طلبًا</h2>
+        <div class="product">
+            <img src="vegetable-item-1.jpg" alt="منتج 1">
+            <p>طماطم</p>
+        </div>
+        <div class="product">
+            <img src="fruite-item-3.jpg" alt="منتج 2">
+            <p>موز</p>
+        </div>
+    </section>
+
+    <!-- الفوتر -->
+    <footer>
+        <ul>
+            <li><a href="#">سياسة الخصوصية</a></li>
+            <li><a href="#">الشروط والأحكام</a></li>
+            <li><a href="#">تواصل معنا</a></li>
+        </ul>
+        <div class="social-media">
+            <a href="#">فيسبوك</a>
+            <a href="#">تويتر</a>
+            <a href="#">إنستغرام</a>
+        </div>
+    </footer>
+
+</body>
+</html>
+

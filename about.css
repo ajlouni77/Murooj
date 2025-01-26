@@ -1,0 +1,195 @@
+/* Navbar Styling */
+.navbar-container {
+    background-color: #81c408; /* اللون الجديد للـ Navbar */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 10px 50px; /* تقليل المسافات الداخلية */
+}
+
+.logo-text {
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    direction: rtl;
+}
+
+.navbar-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-menu li {
+    margin: 0;
+}
+
+.navbar-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.navbar-menu a:hover {
+    color: #fff8d6;
+}
+
+.navbar-icons {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-icons .icon {
+    color: white;
+    font-size: 20px;
+    margin-right: 20px;
+    text-decoration: none;
+}
+
+.navbar-icons .language-button {
+    background-color: white;
+    color: #81c408;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+/* بداية قسم من نحن */
+#about-us {
+    background-color: #f9f9f9;
+    padding: 150px 20px;
+    text-align: center;
+    color: #333;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.about-text {
+    flex: 1;
+    max-width: 600px;
+    text-align: left;
+}
+
+.about-text h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.intro-text {
+    font-size: 18px;
+    color: #777;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.about-info h3 {
+    font-size: 28px;
+    margin-top: 20px;
+    color: #333;
+}
+
+.about-info p {
+    font-size: 16px;
+    color: #777;
+    line-height: 1.6;
+}
+
+.about-image {
+    flex: 1;
+    max-width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* تصميم استجابة للأجهزة المحمولة */
+@media (max-width: 768px) {
+    #about-us {
+        padding: 60px 20px;
+    }
+
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-text {
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .about-image {
+        max-width: 100%;
+    }
+}
+
+/* نهاية قسم من نحن */
+
+
+/* Footer */
+footer {
+    background-color: black;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+footer ul {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+footer ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+footer ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+footer ul li a:hover {
+    color: #4CAF50;
+}
+
+.social-media a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.social-media a:hover {
+    color: #4CAF50;
+}
+
