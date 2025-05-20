@@ -39,9 +39,17 @@ Murooj aims to bridge the gap between local vegetable and fruit stores and custo
 
 ## Installation
 
-To run this project locally:
+# Clone the repo
+https://github.com/ajlouni77/Murooj.git
+# Install backend dependencies
+cd backend
+npm install
+nodemon .\server.js
 
-1. Clone the repository  
-   ```bash
-   git clone https://github.com/your-username/murooj.git
+# Install frontend dependencies
+cd frontend
+npm install
+npm run dev
+
+
 
